@@ -5,10 +5,9 @@ title: Home
 	{% for post in paginator.posts %}
 		<article class="post">
 			{% include post-heading.html post=post %}
-			<div class="image">
+			<a class="image" href="{{ site.baseurl }}{{ post.url }}">
 				<img src="{{ post.featured_image }}" alt="{{ post.title }}">
-			</div>
-
+			</a>
 			{{ post.excerpt }}
 
 			<p><a class="button" href="{{ site.baseurl }}{{ post.url }}">Read more</a></p>
